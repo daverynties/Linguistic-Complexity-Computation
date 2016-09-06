@@ -49,4 +49,4 @@ document_complexity = len(count_values) / len(clean_text)
 
 list_breakdown(clean_text, window)
 print("--- %s seconds ---" % (time.clock() - start_clock))
-print(wd)
+
