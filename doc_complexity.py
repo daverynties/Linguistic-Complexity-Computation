@@ -5,9 +5,6 @@ Created on Mon Sep  5 14:25:26 2016
 @author: David A. Rynties
 """
 
-"""
-NO STOP WORDS
-"""
 import time
 from string import punctuation
 import collections
