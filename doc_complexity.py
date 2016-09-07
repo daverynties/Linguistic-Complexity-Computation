@@ -8,8 +8,6 @@ Created on Mon Sep  5 14:25:26 2016
 import time
 from string import punctuation
 import collections
-import matplotlib.pyplot as plt
-import pylab
 
 file = 'C:\\users\\user\\Desktop\\Medical and Bioinformatics\\677\\alice_in_wonderland.txt'
 window = 1000
