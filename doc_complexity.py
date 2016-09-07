@@ -8,6 +8,8 @@ Created on Mon Sep  5 14:25:26 2016
 import time
 from string import punctuation
 import collections
+import matplotlib.pyplot as plt
+import pylab
 
 file = 'C:\\users\\user\\Desktop\\Medical and Bioinformatics\\677\\alice_in_wonderland.txt'
 window = 1000
@@ -16,10 +18,10 @@ def strip_punctuation(s):
     """remove all punctuation from text"""
     return ''.join(c for c in s if c not in punctuation)
 
-def list_breakdown(text, sliding_window_value_two):
+def list_breakdown(text, sliding_window_value):
     """break list into groups equaled to the sliding window value """
     min_value = 0
-    max_value = sliding_window_value_two 
+    max_value = sliding_window_value 
     while max_value <= len(text):
         current_window = text[min_value:max_value]
         frame_complexity = calc_complexity(current_window)
@@ -46,4 +48,3 @@ document_complexity = len(count_values) / len(clean_text)
 
 list_breakdown(clean_text, window)
 print("--- %s seconds ---" % (time.clock() - start_clock))
-
