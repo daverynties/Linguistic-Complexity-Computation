@@ -11,7 +11,7 @@ import collections
 
 file = 'C:\\users\\user\\Desktop\\Medical and Bioinformatics\\677\\alice_in_wonderland.txt'
 window = [10, 250, 1000, 3000, 5000]
-
+single_window = 1000
 def strip_punctuation(s):
     """remove all punctuation from text"""
     return ''.join(c for c in s if c not in punctuation)
@@ -44,8 +44,9 @@ with open(file, 'r') as f:
 
 document_complexity = len(count_values) / len(clean_text)
 
-list_breakdown(clean_text, window)
-print("--- %s seconds ---" % (time.clock() - start_clock))
+list_breakdown(clean_text, single_window)
+print("Read Complete")
+print("Testing...")
 
 #%%
 
