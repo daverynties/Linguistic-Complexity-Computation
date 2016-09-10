@@ -10,7 +10,7 @@ from string import punctuation
 import collections
 
 file = 'C:\\users\\user\\Desktop\\Medical and Bioinformatics\\677\\alice_in_wonderland.txt'
-window = 1000
+window = [10, 250, 1000, 3000, 5000]
 
 def strip_punctuation(s):
     """remove all punctuation from text"""
@@ -34,7 +34,7 @@ def calc_complexity(list_a):
     return aspect_complexity
 
 #open file
-start_clock = time.clock()
+
 with open(file, 'r') as f: 
     total_complexity = []
     list_complexities = []
@@ -46,3 +46,11 @@ document_complexity = len(count_values) / len(clean_text)
 
 list_breakdown(clean_text, window)
 print("--- %s seconds ---" % (time.clock() - start_clock))
+
+#%%
+
+for index in range(len(window)):
+    start_clock = time.clock()
+    list_breakdown(clean_text, window[index])
+    print("--- Window Value = %s ---" % (window[index]))
+    print("--- %s seconds ---" % (time.clock() - start_clock))
