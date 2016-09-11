@@ -10,8 +10,9 @@ from string import punctuation
 import collections
 
 file = 'C:\\users\\user\\Desktop\\Medical and Bioinformatics\\677\\alice_in_wonderland.txt'
-window = [10, 250, 1000, 3000, 5000]
+test_windows = [10, 250, 1000, 3000, 5000]
 single_window = 1000
+
 def strip_punctuation(s):
     """remove all punctuation from text"""
     return ''.join(c for c in s if c not in punctuation)
@@ -50,8 +51,8 @@ print("Testing...")
 
 #%%
 
-for index in range(len(window)):
+for index in range(len(test_windows)):
     start_clock = time.clock()
-    list_breakdown(clean_text, window[index])
-    print("--- Window Value = %s ---" % (window[index]))
+    list_breakdown(clean_text, test_windows[index])
+    print("--- Window Value = %s ---" % (test_windows[index]))
     print("--- %s seconds ---" % (time.clock() - start_clock))
