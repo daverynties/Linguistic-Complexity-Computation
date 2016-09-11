@@ -52,7 +52,11 @@ print("Testing...")
 #%%
 
 for index in range(len(test_windows)):
+    total_complexity = []
     start_clock = time.clock()
     list_breakdown(clean_text, test_windows[index])
-    print("--- Window Value = %s ---" % (test_windows[index]))
-    print("--- %s seconds ---" % (time.clock() - start_clock))
+    print("")
+    print("\tWindow Value: %s" % (test_windows[index]))
+    print("\tTime: %s Seconds" % (time.clock() - start_clock))
+
+print("\nTesting Complete")
